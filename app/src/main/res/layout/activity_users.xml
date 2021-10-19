@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -18,11 +17,12 @@
             android:layout_marginTop="5dp"
             android:orientation="horizontal">
 
-            <ImageView
-                android:id="@+id/userAva1"
-                android:layout_width="125dp"
-                android:layout_height="125dp"
-                app:srcCompat="@drawable/ic_ava" />
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image1"
+                android:src="@drawable/ic_ava"
+                app:civ_border_width="2dp"
+                app:civ_border_color="#FF000000"
+                style="@style/avaStyle" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -33,16 +33,13 @@
 
                 <TextView
                     android:id="@+id/userName1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="25sp" />
+                    style="@style/nameStyle"
+                    android:text="Adam" />
 
                 <TextView
                     android:id="@+id/lastSeen1"
-                    android:textSize="25sp"
-                    android:text="@string/app_name"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                    android:text="12_min_ago"
+                    style="@style/lastSeenStyle" />
 
             </LinearLayout>
 
@@ -56,11 +53,12 @@
             android:layout_marginTop="5dp"
             android:orientation="horizontal">
 
-            <ImageView
-                android:id="@+id/userAva2"
-                android:layout_width="125dp"
-                android:layout_height="125dp"
-                app:srcCompat="@drawable/ic_ava" />
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image2"
+                style="@style/avaStyle"
+                android:src="@drawable/ic_ava"
+                app:civ_border_color="#FF000000"
+                app:civ_border_width="2dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -71,17 +69,13 @@
 
                 <TextView
                     android:id="@+id/userName2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="25sp"
-                    android:text="@string/app_name" />
+                    android:text="frank"
+                    style="@style/nameStyle" />
 
                 <TextView
                     android:id="@+id/lastSeen2"
-                    android:textSize="25sp"
-                    android:text="2 min ago"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                    android:text="online"
+                    style="@style/lastSeenStyle" />
 
             </LinearLayout>
 
@@ -95,11 +89,12 @@
             android:layout_marginTop="5dp"
             android:orientation="horizontal">
 
-            <ImageView
-                android:id="@+id/userAva3"
-                android:layout_width="125dp"
-                android:layout_height="125dp"
-                app:srcCompat="@drawable/ic_ava" />
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image3"
+                style="@style/avaStyle"
+                android:src="@drawable/ic_ava"
+                app:civ_border_width="2dp"
+                app:civ_border_color="#FF000000"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -110,17 +105,14 @@
 
                 <TextView
                     android:id="@+id/userName3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="25sp"
-                    android:text="@string/app_name" />
+                    android:text="tommy"
+                    style="@style/nameStyle" />
 
                 <TextView
                     android:id="@+id/lastSeen3"
-                    android:textSize="25sp"
-                    android:text="@string/app_name"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                    android:text="30_min_ago"
+                    style="@style/lastSeenStyle" />
+
 
             </LinearLayout>
 
@@ -134,11 +126,12 @@
             android:layout_marginTop="5dp"
             android:orientation="horizontal">
 
-            <ImageView
-                android:id="@+id/userAva4"
-                android:layout_width="125dp"
-                android:layout_height="125dp"
-                app:srcCompat="@drawable/ic_ava" />
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image4"
+                style="@style/avaStyle"
+                android:src="@drawable/ic_ava"
+                app:civ_border_width="2dp"
+                app:civ_border_color="#FF000000"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -149,17 +142,13 @@
 
                 <TextView
                     android:id="@+id/userName4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="25sp"
-                    android:text="@string/app_name" />
+                    android:text="elizabeth"
+                    style="@style/nameStyle" />
 
                 <TextView
                     android:id="@+id/lastSeen4"
-                    android:textSize="25sp"
-                    android:text="@string/app_name"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                    android:text="1_hour_ago"
+                    style="@style/lastSeenStyle" />
 
             </LinearLayout>
 
@@ -173,11 +162,12 @@
             android:layout_marginTop="5dp"
             android:orientation="horizontal">
 
-            <ImageView
-                android:id="@+id/userAva5"
-                android:layout_width="125dp"
-                android:layout_height="125dp"
-                app:srcCompat="@drawable/ic_ava" />
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image5"
+                style="@style/avaStyle"
+                android:src="@drawable/ic_ava"
+                app:civ_border_width="2dp"
+                app:civ_border_color="#FF000000"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -188,17 +178,13 @@
 
                 <TextView
                     android:id="@+id/userName5"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="25sp"
-                    android:text="@string/app_name" />
+                    android:text="emily"
+                    style="@style/nameStyle" />
 
                 <TextView
                     android:id="@+id/lastSeen5"
-                    android:textSize="25sp"
-                    android:text="@string/app_name"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                    android:text="recently"
+                    style="@style/lastSeenStyle" />
 
             </LinearLayout>
 
@@ -212,11 +198,12 @@
             android:layout_marginTop="5dp"
             android:orientation="horizontal">
 
-            <ImageView
-                android:id="@+id/userAva6"
-                android:layout_width="125dp"
-                android:layout_height="125dp"
-                app:srcCompat="@drawable/ic_ava" />
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image6"
+                style="@style/avaStyle"
+                android:src="@drawable/ic_ava"
+                app:civ_border_width="2dp"
+                app:civ_border_color="#FF000000"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -227,17 +214,13 @@
 
                 <TextView
                     android:id="@+id/userName6"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="25sp"
-                    android:text="@string/app_name" />
+                    android:text="harry"
+                    style="@style/nameStyle" />
 
                 <TextView
                     android:id="@+id/lastSeen6"
-                    android:textSize="25sp"
-                    android:text="@string/app_name"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                    android:text="yesterday"
+                    style="@style/lastSeenStyle" />
 
             </LinearLayout>
 
@@ -251,11 +234,12 @@
             android:layout_marginTop="5dp"
             android:orientation="horizontal">
 
-            <ImageView
-                android:id="@+id/userAva7"
-                android:layout_width="125dp"
-                android:layout_height="125dp"
-                app:srcCompat="@drawable/ic_ava" />
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image7"
+                style="@style/avaStyle"
+                android:src="@drawable/ic_ava"
+                app:civ_border_width="2dp"
+                app:civ_border_color="#FF000000"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -266,17 +250,13 @@
 
                 <TextView
                     android:id="@+id/userName7"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="25sp"
-                    android:text="@string/app_name" />
+                    android:text="dave"
+                    style="@style/nameStyle" />
 
                 <TextView
                     android:id="@+id/lastSeen7"
-                    android:textSize="25sp"
-                    android:text="@string/app_name"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                    android:text="5_hour_ago"
+                    style="@style/lastSeenStyle" />
 
             </LinearLayout>
 

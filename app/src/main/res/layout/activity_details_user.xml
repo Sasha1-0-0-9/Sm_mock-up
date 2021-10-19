@@ -1,71 +1,169 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    tools:context=".View.DetailsUserActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="281dp"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/detailsImage"
+        style="@style/avaStyle"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/ic_ava"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/userName"
+        style="@style/nameStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:textSize="35sp"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detailsImage" />
+
+
+    <TextView
+        android:id="@+id/status"
+        style="@style/viewElementStyle1"
+        android:layout_marginTop="45dp"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/userName" />
+
+    <TextView
+        android:id="@+id/userInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userName"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Follow"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/linear"
+        app:layout_constraintTop_toBottomOf="@+id/userInfo" />
 
     <LinearLayout
+        android:id="@+id/linear"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
         android:orientation="vertical"
-        android:background="#FCD2D1"
-        android:layout_weight="2">
+        app:layout_constraintTop_toBottomOf="@id/button">
 
-        <ImageView
-            android:id="@+id/detailsImage1"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="30dp"
-            tools:srcCompat="@tools:sample/avatars" />
-
-        <TextView
-            android:id="@+id/detailsUserName1"
+        <LinearLayout
+            android:id="@+id/firstLine0"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:fontFamily="sans-serif-black"
-            android:text="@string/app_name"
-            android:textAlignment="center"
-            android:textSize="30sp" />
+            android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/detailsTextStatus1"
+            <TextView
+                android:id="@+id/followerText"
+                style="@style/viewElementStyle1"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/followingText"
+                style="@style/viewElementStyle1"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/socialScoreText"
+                style="@style/viewElementStyle1"
+                android:text="" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/firstLine"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:text="@string/app_name"
-            android:textSize="20sp"
-            android:textAlignment="center"/>
+            android:orientation="horizontal">
 
+            <TextView
+                android:id="@+id/textView"
+                style="@style/viewElementStyle"
+                android:text="followers" />
+
+            <TextView
+                android:id="@+id/textView2"
+                style="@style/viewElementStyle"
+                android:text="following" />
+
+            <TextView
+                android:id="@+id/textView3"
+                style="@style/viewElementStyle"
+                android:text="posts" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/postsText"
+                style="@style/viewElementStyle1"
+                android:text="1.2m" />
+
+            <TextView
+                android:id="@+id/sharemeterText"
+                style="@style/viewElementStyle1"
+                android:text="265" />
+
+            <TextView
+                android:id="@+id/posts"
+                style="@style/viewElementStyle1"
+                android:text="945" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            app:layout_constraintTop_toBottomOf="@id/firstLine">
+
+
+
+
+        </LinearLayout>
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_weight="1">
-
-
-        <TextView
-            android:id="@+id/detailsTitle1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="@string/about"
-            android:textAlignment="center"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/detailsTextAboutMe"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp" />
-
-    </LinearLayout>
-
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

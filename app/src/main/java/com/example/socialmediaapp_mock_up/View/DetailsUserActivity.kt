@@ -21,10 +21,10 @@ class DetailsUserActivity : AppCompatActivity(), Serializable {
 
         viewModel = ViewModelProvider(this).get(UserViewModel::class.java)
 
-        val detailsUserName: TextView = findViewById(R.id.detailsUserName1)
-        val detailsTextStatus: TextView = findViewById(R.id.detailsTextStatus1)
-        val detailsTitle: TextView = findViewById(R.id.detailsTextAboutMe)
-        val detailsImage: ImageView = findViewById(R.id.detailsImage1)
+        val detailsUserName: TextView = findViewById(R.id.userName)
+        val detailsTextStatus: TextView = findViewById(R.id.status)
+        val detailsTitle: TextView = findViewById(R.id.userInfo)
+        val detailsImage: ImageView = findViewById(R.id.detailsImage)
         val arguments = intent.extras
         val id = arguments?.getInt("id")
 
