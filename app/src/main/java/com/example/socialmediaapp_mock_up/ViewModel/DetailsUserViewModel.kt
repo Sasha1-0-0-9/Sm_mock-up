@@ -6,15 +6,13 @@ import androidx.lifecycle.ViewModel
 import com.example.socialmediaapp_mock_up.Model.User
 import com.example.socialmediaapp_mock_up.Model.UserData
 
-class UserViewModel : ViewModel() {
+class DetailsUserViewModel: ViewModel() {
 
     val userData: UserData = UserData()
+    private val _userDetailsLiveData = MutableLiveData<User>()
+    val userLiveData : LiveData<User> = _userDetailsLiveData
 
-    private val _userLiveData = MutableLiveData<List<User>>()
-    val userLiveData: LiveData<List<User>> = _userLiveData
-
-    fun loadUserData() {
-        _userLiveData.value = userData.userList
+    fun loadDetailsUserData(id: Int){
+        _userDetailsLiveData.value = userData.userList[id]
     }
-
 }
