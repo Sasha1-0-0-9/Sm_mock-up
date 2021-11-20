@@ -41,9 +41,8 @@ class UserListActivity : AppCompatActivity() {
             findViewById(R.id.profile_image5), findViewById(R.id.profile_image6),
             findViewById(R.id.profile_image7)
         )
-        //viewModel.insertUserToDataBase()
+        viewModel.insert()
         viewModel.loadUserData()
-
         viewModel.userLiveData.observe(this, Observer {
 
             for (id in users.indices) {
@@ -58,7 +57,6 @@ class UserListActivity : AppCompatActivity() {
         val intent = Intent(this, DetailsUserActivity::class.java)
         intent.putExtra("id", index)
         startActivity(intent)
-
     }
 }
 

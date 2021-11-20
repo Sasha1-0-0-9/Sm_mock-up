@@ -1,6 +1,9 @@
 package com.example.socialmediaapp_mock_up.View
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.View
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -9,12 +12,14 @@ import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
 import com.example.socialmediaapp_mock_up.R
 import com.example.socialmediaapp_mock_up.ViewModel.DetailsUserViewModel
-import com.example.socialmediaapp_mock_up.ViewModel.UserViewModel
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import java.io.Serializable
+import kotlin.properties.Delegates
 
 
 class DetailsUserActivity : AppCompatActivity(), Serializable {
     private lateinit var viewModel: DetailsUserViewModel
+    private var id by Delegates.notNull<Int>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,10 +31,9 @@ class DetailsUserActivity : AppCompatActivity(), Serializable {
         val detailsTextStatus: TextView = findViewById(R.id.status)
         val detailsTitle: TextView = findViewById(R.id.userInfo)
         val detailsImage: ImageView = findViewById(R.id.detailsImage)
-        val arguments = intent.extras
-        val id = arguments?.getInt("id")
-
-        viewModel.loadDetailsUserData(id!!)
+        val edit : FloatingActionButton = findViewById(R.id.fab)
+        id = intent.extras?.getInt("id") ?: 0
+        viewModel.loadDetailsUserData(id)
 
         viewModel.userLiveData.observe(this, Observer {
 
@@ -39,4 +43,11 @@ class DetailsUserActivity : AppCompatActivity(), Serializable {
             detailsTitle.text = it.description
         })
     }
+    private fun onClick(id: Int) {
+        val intent = Intent(this, EditProfileActivity::class.java)
+        intent.putExtra("id", id)
+        startActivity(intent)
+    }
 }
+
+
