@@ -18,4 +18,9 @@ interface UserDatabaseDao {
     @Query("SELECT * FROM users_database")
     fun getAllUsers() : List<User>
 
+    @Query("SELECT * from users_database WHERE id = :key")
+    fun get(key: Int): User?
+
+    @Query("SELECT * FROM users_database LIMIT 1")
+    fun getUser() : User?
 }

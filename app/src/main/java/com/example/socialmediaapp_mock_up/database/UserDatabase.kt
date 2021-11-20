@@ -6,31 +6,33 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.example.socialmediaapp_mock_up.Model.User
 
-@Database(entities = [User::class], version = 1, exportSchema = false)
+@Database(entities = [User::class], version = 1, exportSchema = true)
 abstract class UserDatabase : RoomDatabase() {
-    abstract val userDatabaseDao : UserDatabaseDao
 
-    companion object{
+    abstract val userDatabaseDao: UserDatabaseDao
+
+    companion object {
+
         @Volatile
-        private var INSTANCE : UserDatabase? = null
+        private var INSTANCE: UserDatabase? = null
 
         fun getInstance(context: Context): UserDatabase {
-            synchronized(this){
+            synchronized(this) {
                 var instance = INSTANCE
 
-                if (instance == null){
+                if (instance == null) {
                     instance = Room.databaseBuilder(
                         context.applicationContext,
                         UserDatabase::class.java,
-                        "users_database")
+                        "users_info_table"
+                    )
+                        .allowMainThreadQueries()
                         .fallbackToDestructiveMigration()
                         .build()
                     INSTANCE = instance
                 }
-
                 return instance
             }
         }
-
     }
 }

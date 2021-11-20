@@ -1,24 +1,16 @@
 package com.example.socialmediaapp_mock_up.View
 
 import android.content.Intent
-import android.graphics.Bitmap
-import android.graphics.BitmapFactory
-import android.net.Uri
-import android.net.Uri.decode
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat.startActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
 import com.example.socialmediaapp_mock_up.R
 import com.example.socialmediaapp_mock_up.ViewModel.UserViewModel
-import java.io.ByteArrayInputStream
-import java.io.InputStream
-import java.util.stream.Stream
 
 class UserListActivity : AppCompatActivity() {
 
@@ -49,13 +41,13 @@ class UserListActivity : AppCompatActivity() {
             findViewById(R.id.profile_image5), findViewById(R.id.profile_image6),
             findViewById(R.id.profile_image7)
         )
-
+        //viewModel.insertUserToDataBase()
         viewModel.loadUserData()
 
         viewModel.userLiveData.observe(this, Observer {
 
-            for(id in users.indices){
-                users[id].setOnClickListener{onClick(id)}
+            for (id in users.indices) {
+                users[id].setOnClickListener { onClick(id) }
                 userNames[id].text = it[id].name
                 Glide.with(this).load(it[id].photo).into(userPhotos[id])
             }
@@ -66,6 +58,7 @@ class UserListActivity : AppCompatActivity() {
         val intent = Intent(this, DetailsUserActivity::class.java)
         intent.putExtra("id", index)
         startActivity(intent)
+
     }
 }
 
