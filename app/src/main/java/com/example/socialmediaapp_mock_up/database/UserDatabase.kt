@@ -6,7 +6,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.example.socialmediaapp_mock_up.Model.User
 
-@Database(entities = [User::class], version = 1, exportSchema = true)
+@Database(entities = [User::class], version = 1, exportSchema = false)
 abstract class UserDatabase : RoomDatabase() {
 
     abstract val userDatabaseDao: UserDatabaseDao

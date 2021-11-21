@@ -13,6 +13,7 @@ import com.bumptech.glide.Glide
 import com.example.socialmediaapp_mock_up.R
 import com.example.socialmediaapp_mock_up.ViewModel.DetailsUserViewModel
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.android.material.snackbar.Snackbar
 import java.io.Serializable
 import kotlin.properties.Delegates
 
@@ -24,15 +25,14 @@ class DetailsUserActivity : AppCompatActivity(), Serializable {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_details_user)
-
         viewModel = ViewModelProvider(this).get(DetailsUserViewModel::class.java)
 
         val detailsUserName: TextView = findViewById(R.id.userName)
         val detailsTextStatus: TextView = findViewById(R.id.status)
         val detailsTitle: TextView = findViewById(R.id.userInfo)
         val detailsImage: ImageView = findViewById(R.id.detailsImage)
-        val edit : FloatingActionButton = findViewById(R.id.fab)
         id = intent.extras?.getInt("id") ?: 0
+
         viewModel.loadDetailsUserData(id)
 
         viewModel.userLiveData.observe(this, Observer {
@@ -42,11 +42,12 @@ class DetailsUserActivity : AppCompatActivity(), Serializable {
             Glide.with(this).load(it.photo).into(detailsImage)
             detailsTitle.text = it.description
         })
-    }
-    private fun onClick(id: Int) {
-        val intent = Intent(this, EditProfileActivity::class.java)
-        intent.putExtra("id", id)
-        startActivity(intent)
+        val fab: View = findViewById(R.id.fab)
+        fab.setOnClickListener { view ->
+            val intent = Intent(this, EditProfileActivity::class.java)
+            intent.putExtra("id", id)
+            startActivity(intent)
+        }
     }
 }
 

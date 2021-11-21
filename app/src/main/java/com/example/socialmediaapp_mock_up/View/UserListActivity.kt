@@ -35,6 +35,13 @@ class UserListActivity : AppCompatActivity() {
             findViewById(R.id.userName7)
         )
 
+        val lastSeen = listOf<TextView>(
+            findViewById(R.id.lastSeen1), findViewById(R.id.lastSeen2),
+            findViewById(R.id.lastSeen3), findViewById(R.id.lastSeen4),
+            findViewById(R.id.lastSeen5), findViewById(R.id.lastSeen6),
+            findViewById(R.id.lastSeen7)
+        )
+
         val userPhotos = listOf<ImageView>(
             findViewById(R.id.profile_image1), findViewById(R.id.profile_image2),
             findViewById(R.id.profile_image3), findViewById(R.id.profile_image4),
@@ -48,14 +55,15 @@ class UserListActivity : AppCompatActivity() {
             for (id in users.indices) {
                 users[id].setOnClickListener { onClick(id) }
                 userNames[id].text = it[id].name
+                lastSeen[id].text = it[id].online
                 Glide.with(this).load(it[id].photo).into(userPhotos[id])
             }
         })
     }
 
-    private fun onClick(index: Int) {
+    private fun onClick(id: Int) {
         val intent = Intent(this, DetailsUserActivity::class.java)
-        intent.putExtra("id", index)
+        intent.putExtra("id", id+1)
         startActivity(intent)
     }
 }

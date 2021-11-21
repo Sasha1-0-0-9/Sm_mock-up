@@ -1,8 +1,5 @@
 package com.example.socialmediaapp_mock_up.Model
 
-import android.graphics.drawable.Drawable
-import android.net.Uri
-
 class UserData {
     val userList = listOf(
         User(

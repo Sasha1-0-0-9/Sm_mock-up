@@ -34,11 +34,11 @@
                 <TextView
                     android:id="@+id/userName1"
                     style="@style/nameStyle"
-                    android:text="Adam" />
+                    android:text="@string/userName" />
 
                 <TextView
                     android:id="@+id/lastSeen1"
-                    android:text="12_min_ago"
+                    android:text="@string/onlineStatus"
                     style="@style/lastSeenStyle" />
 
             </LinearLayout>
@@ -69,12 +69,12 @@
 
                 <TextView
                     android:id="@+id/userName2"
-                    android:text="frank"
+                    android:text="@string/userName"
                     style="@style/nameStyle" />
 
                 <TextView
                     android:id="@+id/lastSeen2"
-                    android:text="online"
+                    android:text="@string/onlineStatus"
                     style="@style/lastSeenStyle" />
 
             </LinearLayout>
@@ -105,12 +105,12 @@
 
                 <TextView
                     android:id="@+id/userName3"
-                    android:text="tommy"
+                    android:text="@string/userName"
                     style="@style/nameStyle" />
 
                 <TextView
                     android:id="@+id/lastSeen3"
-                    android:text="30_min_ago"
+                    android:text="@string/onlineStatus"
                     style="@style/lastSeenStyle" />
 
 
@@ -142,12 +142,12 @@
 
                 <TextView
                     android:id="@+id/userName4"
-                    android:text="elizabeth"
+                    android:text="@string/userName"
                     style="@style/nameStyle" />
 
                 <TextView
                     android:id="@+id/lastSeen4"
-                    android:text="1_hour_ago"
+                    android:text="@string/onlineStatus"
                     style="@style/lastSeenStyle" />
 
             </LinearLayout>
@@ -178,12 +178,12 @@
 
                 <TextView
                     android:id="@+id/userName5"
-                    android:text="emily"
+                    android:text="@string/userName"
                     style="@style/nameStyle" />
 
                 <TextView
                     android:id="@+id/lastSeen5"
-                    android:text="recently"
+                    android:text="@string/onlineStatus"
                     style="@style/lastSeenStyle" />
 
             </LinearLayout>
@@ -214,12 +214,12 @@
 
                 <TextView
                     android:id="@+id/userName6"
-                    android:text="harry"
+                    android:text="@string/userName"
                     style="@style/nameStyle" />
 
                 <TextView
                     android:id="@+id/lastSeen6"
-                    android:text="yesterday"
+                    android:text="@string/onlineStatus"
                     style="@style/lastSeenStyle" />
 
             </LinearLayout>
@@ -250,19 +250,18 @@
 
                 <TextView
                     android:id="@+id/userName7"
-                    android:text="dave"
+                    android:text="@string/userName"
                     style="@style/nameStyle" />
 
                 <TextView
                     android:id="@+id/lastSeen7"
-                    android:text="5_hour_ago"
+                    android:text="@string/onlineStatus"
                     style="@style/lastSeenStyle" />
 
             </LinearLayout>
 
 
         </LinearLayout>
-
 
     </LinearLayout>
 

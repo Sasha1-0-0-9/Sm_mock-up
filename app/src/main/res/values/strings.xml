@@ -2,6 +2,15 @@
     <string name="app_name">SocialMediaApp_mock-up</string>
     <string name="about">Somethig interesting about me</string>
     <string name="title_activity_user_profile">MainActivity</string>
+    <string name="userName">Tim</string>
+    <string name="onlineStatus">online</string>
+    <string name="followBtn">Follow</string>
+    <string name="followers">Followers</string>
+    <string name="following">Following</string>
+    <string name="posts">Posts</string>
+    <string name="editBtn">Save</string>
+
+
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
@@ -24,4 +33,14 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <string name="editProfileTitle">Edit Profile</string>
+
+    <string name="nameHint">Full name</string>
+    <string name="onlineHint">Online</string>
+    <string name="photoHint">Photo URI</string>
+    <string name="descriptionHint">Description</string>
+    <string name="hobbyHint">Hobby</string>
+
+
 </resources>

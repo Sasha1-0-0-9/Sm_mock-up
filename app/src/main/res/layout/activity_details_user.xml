@@ -15,7 +15,8 @@
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        android:contentDescription="@string/app_name" />
 
 
     <de.hdodenhof.circleimageview.CircleImageView
@@ -74,7 +75,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="Follow"
+        android:text="@string/followBtn"
         android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@id/linear"
@@ -120,17 +121,17 @@
             <TextView
                 android:id="@+id/textView"
                 style="@style/viewElementStyle"
-                android:text="followers" />
+                android:text="@string/followers" />
 
             <TextView
                 android:id="@+id/textView2"
                 style="@style/viewElementStyle"
-                android:text="following" />
+                android:text="@string/following" />
 
             <TextView
                 android:id="@+id/textView3"
                 style="@style/viewElementStyle"
-                android:text="posts" />
+                android:text="@string/posts" />
         </LinearLayout>
 
         <LinearLayout
@@ -180,7 +181,8 @@
         android:backgroundTint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_edit" />
+        app:srcCompat="@android:drawable/ic_menu_edit"
+        android:contentDescription="@string/app_name" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
