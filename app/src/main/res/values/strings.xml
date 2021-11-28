@@ -42,5 +42,9 @@
     <string name="descriptionHint">Description</string>
     <string name="hobbyHint">Hobby</string>
 
+    <string name="followersCount">1.2m</string>
+    <string name="followingCount">265</string>
+    <string name="postsCount">945</string>
+
 
 </resources>

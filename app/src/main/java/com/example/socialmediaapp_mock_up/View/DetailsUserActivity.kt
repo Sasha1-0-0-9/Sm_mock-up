@@ -42,7 +42,7 @@ class DetailsUserActivity : AppCompatActivity(), Serializable {
             Glide.with(this).load(it.photo).into(detailsImage)
             detailsTitle.text = it.description
         })
-        val fab: View = findViewById(R.id.fab)
+        val fab: View = findViewById(R.id.fabEditProfile)
         fab.setOnClickListener { view ->
             val intent = Intent(this, EditProfileActivity::class.java)
             intent.putExtra("id", id)

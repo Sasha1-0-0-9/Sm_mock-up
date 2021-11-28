@@ -71,7 +71,7 @@
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnFollow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -87,7 +87,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@id/button">
+        app:layout_constraintTop_toBottomOf="@id/btnFollow">
 
         <LinearLayout
             android:id="@+id/firstLine0"
@@ -143,17 +143,17 @@
             <TextView
                 android:id="@+id/postsText"
                 style="@style/viewElementStyle1"
-                android:text="1.2m" />
+                android:text="@string/followersCount" />
 
             <TextView
                 android:id="@+id/sharemeterText"
                 style="@style/viewElementStyle1"
-                android:text="265" />
+                android:text="@string/followingCount" />
 
             <TextView
                 android:id="@+id/posts"
                 style="@style/viewElementStyle1"
-                android:text="945" />
+                android:text="@string/postsCount" />
         </LinearLayout>
 
         <LinearLayout
@@ -171,7 +171,7 @@
     </LinearLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
+        android:id="@+id/fabEditProfile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"

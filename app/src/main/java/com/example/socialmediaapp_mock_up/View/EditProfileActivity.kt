@@ -22,11 +22,11 @@ class EditProfileActivity : AppCompatActivity() {
         viewModel = ViewModelProvider(this).get(DetailsUserViewModel::class.java)
 
         id = intent.extras?.getInt("id")!!
-        val editUserName: EditText = findViewById(R.id.editName)
-        val editOnline: EditText = findViewById(R.id.editOnline)
-        val editPhoto: EditText = findViewById(R.id.editPhoto)
-        val editDesc: EditText = findViewById(R.id.editDescription)
-        val editHobby: EditText = findViewById(R.id.editHobby)
+        val editUserName: EditText = findViewById(R.id.etName)
+        val editOnline: EditText = findViewById(R.id.etOnline)
+        val editPhoto: EditText = findViewById(R.id.etPhoto)
+        val editDesc: EditText = findViewById(R.id.etDescription)
+        val editHobby: EditText = findViewById(R.id.etHobby)
         viewModel.loadDetailsUserData(id)
 
         viewModel.userLiveData.observe(this, Observer {
@@ -37,7 +37,7 @@ class EditProfileActivity : AppCompatActivity() {
             editHobby.setText(it.hobby)
         })
 
-        val btn: Button = findViewById(R.id.saveBtn)
+        val btn: Button = findViewById(R.id.btnSaveChanges)
         btn.setOnClickListener {
             val user: User = User(
                 id,

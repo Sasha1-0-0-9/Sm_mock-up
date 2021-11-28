@@ -23,7 +23,7 @@
 
 
         <EditText
-            android:id="@+id/editName"
+            android:id="@+id/etName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
@@ -34,7 +34,7 @@
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/editOnline"
+            android:id="@+id/etOnline"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
@@ -45,7 +45,7 @@
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/editPhoto"
+            android:id="@+id/etPhoto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
@@ -55,7 +55,7 @@
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/editHobby"
+            android:id="@+id/etHobby"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
@@ -65,7 +65,7 @@
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/editDescription"
+            android:id="@+id/etDescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
@@ -75,7 +75,7 @@
             android:textSize="20sp" />
 
         <Button
-            android:id="@+id/saveBtn"
+            android:id="@+id/btnSaveChanges"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/editBtn" />
