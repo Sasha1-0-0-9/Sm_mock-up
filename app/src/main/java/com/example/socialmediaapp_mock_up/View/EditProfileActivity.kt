@@ -10,16 +10,17 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.socialmediaapp_mock_up.Model.User
 import com.example.socialmediaapp_mock_up.R
 import com.example.socialmediaapp_mock_up.ViewModel.DetailsUserViewModel
+import com.example.socialmediaapp_mock_up.ViewModel.EditProfileViewModel
 import kotlin.properties.Delegates
 
 class EditProfileActivity : AppCompatActivity() {
-    private lateinit var viewModel: DetailsUserViewModel
+    private lateinit var viewModel: EditProfileViewModel
     private var id by Delegates.notNull<Int>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_edit_profile)
-        viewModel = ViewModelProvider(this).get(DetailsUserViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(EditProfileViewModel::class.java)
 
         id = intent.extras?.getInt("id")!!
         val editUserName: EditText = findViewById(R.id.etName)
