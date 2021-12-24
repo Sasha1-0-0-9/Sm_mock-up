@@ -33,7 +33,7 @@ class DetailsUserActivity : AppCompatActivity(), Serializable {
         val detailsImage: ImageView = findViewById(R.id.detailsImage)
         id = intent.extras?.getInt("id") ?: 0
 
-        viewModel.loadDetailsUserData(id)
+        viewModel.init(id)
 
         viewModel.userLiveData.observe(this, Observer {
 

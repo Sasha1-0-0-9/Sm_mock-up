@@ -28,7 +28,7 @@ class EditProfileActivity : AppCompatActivity() {
         val editPhoto: EditText = findViewById(R.id.etPhoto)
         val editDesc: EditText = findViewById(R.id.etDescription)
         val editHobby: EditText = findViewById(R.id.etHobby)
-        viewModel.loadDetailsUserData(id)
+        viewModel.init(id)
 
         viewModel.userLiveData.observe(this, Observer {
             editUserName.setText(it.name)

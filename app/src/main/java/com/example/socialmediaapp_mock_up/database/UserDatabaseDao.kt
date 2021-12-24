@@ -1,5 +1,6 @@
 package com.example.socialmediaapp_mock_up.database
 
+import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
@@ -10,17 +11,20 @@ import com.example.socialmediaapp_mock_up.Model.User
 interface UserDatabaseDao {
 
     @Insert
-    fun insert(user: User)
+    suspend fun insert(user: User)
 
     @Update
-    fun update(user: User)
+    suspend fun update(user: User)
 
     @Query("SELECT * FROM users_database")
-    fun getAllUsers() : List<User>
+    suspend fun getAllUsers() : List<User>
 
     @Query("SELECT * from users_database WHERE id = :key")
-    fun get(key: Int): User?
+    suspend fun get(key: Int): User?
 
     @Query("SELECT * FROM users_database LIMIT 1")
-    fun getUser() : User?
+    suspend fun getUser() : User?
+
+    @Query("SELECT * FROM users_database")
+    fun getAllUsersLiveData() : LiveData<List<User>>
 }
