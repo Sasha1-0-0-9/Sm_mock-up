@@ -14,10 +14,7 @@ class DetailsUserViewModel(application: Application) : AndroidViewModel(applicat
     val dataSource = UserDatabase.getInstance(application).userDatabaseDao
     val userLiveData: LiveData<User> = _userDetailsLiveData
 
-    suspend fun loadDetailsUserData(id: Int) {
-        _userDetailsLiveData.value = dataSource.get(id)
-    }
-    fun init(id: Int) {
+    fun loadDetailsUserData(id: Int) {
         viewModelScope.launch {
             _userDetailsLiveData.value = dataSource.get(id)
         }

@@ -36,6 +36,8 @@
 
     <string name="editProfileTitle">Edit Profile</string>
 
+    <string name="createProfileTitle">Create Profile</string>
+
     <string name="nameHint">Full name</string>
     <string name="onlineHint">Online</string>
     <string name="photoHint">Photo URI</string>

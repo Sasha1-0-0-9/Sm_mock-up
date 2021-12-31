@@ -4,6 +4,9 @@ import UserAdapter
 import android.content.Intent
 import android.os.Bundle
 import android.service.autofill.OnClickAction
+import android.view.Menu
+import android.view.MenuItem
+import android.view.View
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
@@ -35,6 +38,12 @@ class UserListActivity : AppCompatActivity(), OnUserClick {
                 adapter.submitList(it)
             }
         })
+
+        val fab: View = findViewById(R.id.fabCreateProfile)
+        fab.setOnClickListener { view ->
+            val intent = Intent(this, AddUserActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     override fun onClick(id: Int) {

@@ -27,4 +27,7 @@ interface UserDatabaseDao {
 
     @Query("SELECT * FROM users_database")
     fun getAllUsersLiveData() : LiveData<List<User>>
+
+    @Query("SELECT COUNT(*) FROM users_database")
+    suspend fun size() : Int
 }
